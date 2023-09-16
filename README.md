@@ -77,6 +77,6 @@ Thanks for your support.
 Any ideas or issues, feel free to contact me.
 <p align="center">
   <a href="https://discord.gg/yG7GSrGcbS">
-    <img src="https://discord-cards.kurizu.repl.co/api/card/803182913582792755?about=%E5%BE%85%E5%88%B0%E7%A7%8B%E6%9D%A5%E4%B9%9D%E6%9C%88%E5%85%AB&banner=https://cdn.discordapp.com/attachments/1078305413503651932/1152506659843887164/IMG_6490.jpg&large_image=&small_image=https://cdn.discordapp.com/attachments/1078305413503651932/1152517790922706954/R.png&hex=" alt="Lgos">
+    <img src="https://github.com/MrLgos/Vector/assets/104048162/b073f3ba-a186-4cc3-ac2f-4482c488017a" alt="Lgos">
   </a>
 </p>
