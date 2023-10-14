@@ -3,135 +3,199 @@ import disnake
 from disnake.ext import commands
 import Utils.Utils as Utils
 
+
 class ResCommand(commands.Cog):
-    def __init__(self, bot):
-        self.bot = bot
 
-    @commands.slash_command()
-    async def res(
-        self,
-        inter
-    ):
-        pass
+  def __init__(self, bot):
+    self.bot = bot
 
-    @res.sub_command(description = "Provides general info about a resident")
-    async def search(
-        self,
-        inter: disnake.ApplicationCommandInteraction,
-        username: str = commands.Param(description = "Resident's username, type 'random' for a random choice"),
-        server: str = commands.Param(description = "Server name, defaults to Aurora", default = "aurora", choices = ["aurora"])
-    ):
-        commandString = f"/res search username: {username} server: {server}"
-        await inter.response.defer()
+  @commands.slash_command()
+  async def res(self, inter):
+    pass
+
+  @res.sub_command(description="Provides general info about a resident")
+  async def search(
+      self,
+      inter: disnake.ApplicationCommandInteraction,
+      username: str = commands.Param(
+          description="Resident's username, type 'random' for a random choice"
+      ),
+      server: str = commands.Param(
+          description="Server name, defaults to Aurora",
+          default="aurora",
+          choices=["aurora"])):
+    commandString = f"/res search username: {username} server: {server}"
+    await inter.response.defer()
+    try:
+      if username == "random":
+        allResidentsLookup = Utils.Lookup.lookup(server, endpoint="residents")
+        username = random.choice(allResidentsLookup["allResidents"])
+      residentsLookup = Utils.Lookup.lookup(server,
+                                            endpoint="residents",
+                                            name=username)
+
+    except:
+      embed = Utils.Embeds.error_embed(
+          value=
+          "Check if you wrote a parameter incorrectly or if the server is currently offline",
+          type="userError",
+          footer=commandString)
+
+      await inter.send(embed=embed, ephemeral=True)
+      return
+
+    try:
+      fullNameList = [
+          residentsLookup["strings"]["title"],
+          residentsLookup["strings"]["username"],
+          residentsLookup["strings"]["surname"]
+      ]
+      fullNameList = [x for x in fullNameList if x != ""]
+
+      fullName = ""
+      for i in range(len(fullNameList)):
+        if i == len(fullNameList) - 1:
+          fullName += fullNameList[i]
+        else:
+          fullName += fullNameList[i] + " "
+
+      if residentsLookup["timestamps"]["lastOnline"] != 0:
+        lastOnline = f"<t:{round(residentsLookup['timestamps']['lastOnline'] / 1000)}:R>"
+      else:
+        lastOnline = "NPC"
+
+      try:
+        town = residentsLookup["affiliation"]["town"]
+        joinedTownAt = f"<t:{round(residentsLookup['timestamps']['joinedTownAt'] / 1000)}:R>"
         try:
-            if username == "random":
-                allResidentsLookup = Utils.Lookup.lookup(server, endpoint = "residents")
-                username = random.choice(allResidentsLookup["allResidents"])
-            residentsLookup = Utils.Lookup.lookup(server, endpoint = "residents", name = username)
-            
+          nation = residentsLookup["affiliation"]["nation"]
         except:
-            embed = Utils.Embeds.error_embed(value = "Check if you wrote a parameter incorrectly or if the server is currently offline", type = "userError", footer = commandString)
+          nation = None
 
-            await inter.send(embed = embed, ephemeral = True)
-            return
+      except:
+        town = None
+        joinedTownAt = "N/A"
+        nation = None
 
-        try:
-            fullNameList = [residentsLookup["strings"]["title"], residentsLookup["strings"]["username"], residentsLookup["strings"]["surname"]]
-            fullNameList = [x for x in fullNameList if x != ""]
+      rnaoPermsList = Utils.CommandTools.rnao_perms(json=residentsLookup)
+      TrueFalse_Flag = {True: "🟢", False: "🔴"}
 
-            fullName = ""
-            for i in range(len(fullNameList)):
-                if i == len(fullNameList) - 1:
-                    fullName += fullNameList[i]
-                else:
-                    fullName += fullNameList[i] + " "
+      embed = Utils.Embeds.embed_builder(
+          title=f"`{fullName}`",
+          author=inter.author,
+          footer=commandString,
+          thumbnail=
+          f"https://mc-heads.net/head/{residentsLookup['strings']['username']}"
+      )
 
-            if residentsLookup["timestamps"]["lastOnline"] != 0:
-                lastOnline = f"<t:{round(residentsLookup['timestamps']['lastOnline'] / 1000)}:R>"
-            else:
-                lastOnline = "NPC"
+      embed.add_field(name="Affiliation",
+                      value=f"• `Town` — {town}\n• `Nation` — {nation}",
+                      inline=True)
+      embed.add_field(
+          name="Online",
+          value=TrueFalse_Flag[residentsLookup["status"]["isOnline"]],
+          inline=True)
+      embed.add_field(name="Balance",
+                      value=f"{residentsLookup['stats']['balance']}G",
+                      inline=True)
 
-            try:
-                town = residentsLookup["affiliation"]["town"]
-                joinedTownAt = f"<t:{round(residentsLookup['timestamps']['joinedTownAt'] / 1000)}:R>"
-                try:
-                    nation = residentsLookup["affiliation"]["nation"]
-                except:
-                    nation = None
+      embed.add_field(
+          name="Registered",
+          value=
+          f"<t:{round(residentsLookup['timestamps']['registered'] / 1000)}:R>",
+          inline=True)
+      embed.add_field(name="Last Online", value=lastOnline, inline=True)
+      embed.add_field(name="Joined Town", value=joinedTownAt, inline=True)
 
-            except:
-                town = None
-                joinedTownAt = "N/A"
-                nation = None
+      embed.add_field(
+          name="Perms",
+          value=
+          f"• `Build` — {rnaoPermsList[0]}\n• `Destroy` — {rnaoPermsList[1]}\n• `Switch` — {rnaoPermsList[2]}\n• `ItemUse` — {rnaoPermsList[3]}",
+          inline=True)
+      embed.add_field(
+          name="Flags",
+          value=
+          f"• `PvP` — {TrueFalse_Flag[residentsLookup['perms']['flagPerms']['pvp']]}\n• `Explosions` — {TrueFalse_Flag[residentsLookup['perms']['flagPerms']['explosion']]}\n• `Firespread` — {TrueFalse_Flag[residentsLookup['perms']['flagPerms']['fire']]}\n• `Mob Spawns` — {TrueFalse_Flag[residentsLookup['perms']['flagPerms']['mobs']]}",
+          inline=True)
 
-            rnaoPermsList = Utils.CommandTools.rnao_perms(json = residentsLookup)
+      for rankType in residentsLookup["ranks"]:
+        if len(residentsLookup["ranks"][rankType]) != 0:
+          rankString = Utils.CommandTools.list_to_string(
+              list=residentsLookup["ranks"][rankType])
 
-            embed = Utils.Embeds.embed_builder(title = f"`{fullName}`", author = inter.author, footer = commandString, thumbnail = f"https://mc-heads.net/head/{residentsLookup['strings']['username']}")
+          if rankType == "townRanks":
+            name = "Town Ranks"
+          else:
+            name = "Nation Ranks"
 
-            embed.add_field(name = "Affiliation", value = f"• `Town` — {town}\n• `Nation` — {nation}", inline = True)
-            embed.add_field(name = "Online", value = residentsLookup["status"]["isOnline"], inline = True)
-            embed.add_field(name = "Balance", value = f"{residentsLookup['stats']['balance']}G", inline = True)
+          embed.add_field(name=name, value=rankString.title(), inline=False)
 
-            embed.add_field(name = "Registered", value = f"<t:{round(residentsLookup['timestamps']['registered'] / 1000)}:R>", inline = True)
-            embed.add_field(name = "Last Online", value = lastOnline, inline = True)
-            embed.add_field(name = "Joined Town", value = joinedTownAt, inline = True)
+      await inter.send(embed=embed, ephemeral=False)
 
-            embed.add_field(name = "Perms", value = f"• `Build` — {rnaoPermsList[0]}\n• `Destroy` — {rnaoPermsList[1]}\n• `Switch` — {rnaoPermsList[2]}\n• `ItemUse` — {rnaoPermsList[3]}", inline = True)
-            embed.add_field(name = "Flags", value = f"• `PvP` — {residentsLookup['perms']['flagPerms']['pvp']}\n• `Explosions` — {residentsLookup['perms']['flagPerms']['explosion']}\n• `Firespread` — {residentsLookup['perms']['flagPerms']['fire']}\n• `Mob Spawns` — {residentsLookup['perms']['flagPerms']['mobs']}", inline = True)
+    except:
+      embed = Utils.Embeds.error_embed(
+          value=
+          "If it is not evident that the error was your fault, please report it",
+          footer=commandString)
 
-            for rankType in residentsLookup["ranks"]:
-                if len(residentsLookup["ranks"][rankType]) != 0:
-                    rankString = Utils.CommandTools.list_to_string(list = residentsLookup["ranks"][rankType])
+      await inter.send(embed=embed, ephemeral=True)
 
-                    if rankType == "townRanks":
-                        name = "Town Ranks"
-                    else:
-                        name = "Nation Ranks"
+  @res.sub_command(description="View all the friends of a specified resident")
+  async def friendlist(
+      self,
+      inter: disnake.ApplicationCommandInteraction,
+      username: str = commands.Param(description="Resident's username"),
+      server: str = commands.Param(
+          description="Server name, defaults to Aurora",
+          default="aurora",
+          choices=["aurora"])):
+    commandString = f"/res friendlist username: {username} server: {server}"
+    await inter.response.defer()
+    try:
+      residentsLookup = Utils.Lookup.lookup(server.lower(),
+                                            endpoint="residents",
+                                            name=username)
 
-                    embed.add_field(name = name, value = rankString.title(), inline = False)
+    except:
+      embed = Utils.Embeds.error_embed(
+          value=
+          "Check if you wrote a parameter incorrectly or if the server is currently offline",
+          type="userError",
+          footer=commandString)
 
-            await inter.send(embed = embed, ephemeral = False)
+      await inter.send(embed=embed, ephemeral=True)
+      return
 
-        except:
-            embed = Utils.Embeds.error_embed(value = "If it is not evident that the error was your fault, please report it", footer = commandString)
+    try:
+      embed = Utils.Embeds.embed_builder(
+          title=f"`{residentsLookup['strings']['username']}'s Friends`",
+          footer=commandString,
+          author=inter.author)
 
-            await inter.send(embed = embed, ephemeral = True)
+      if len(residentsLookup["friends"]) != 0:
+        friendsString = Utils.CommandTools.list_to_string(
+            list=residentsLookup["friends"])
 
-    @res.sub_command(description = "View all the friends of a specified resident")
-    async def friendlist(
-        self,
-        inter: disnake.ApplicationCommandInteraction,
-        username: str = commands.Param(description = "Resident's username"),
-        server: str = commands.Param(description = "Server name, defaults to Aurora", default = "aurora", choices = ["aurora"])
-    ):
-        commandString = f"/res friendlist username: {username} server: {server}"
-        await inter.response.defer()
-        try:
-            residentsLookup = Utils.Lookup.lookup(server.lower(), endpoint = "residents", name = username)
+        embed.add_field(name="Friends",
+                        value=f"```{friendsString[:1018]}```",
+                        inline=True)
 
-        except:
-            embed = Utils.Embeds.error_embed(value = "Check if you wrote a parameter incorrectly or if the server is currently offline", type = "userError", footer = commandString)
+      else:
+        embed.add_field(
+            name="Friends",
+            value=f"{residentsLookup['strings']['username']} has no friends :(",
+            inline=True)
 
-            await inter.send(embed = embed, ephemeral = True)
-            return
-        
-        try:
-            embed = Utils.Embeds.embed_builder(title = f"`{residentsLookup['strings']['username']}'s Friends`", footer = commandString, author = inter.author)
+      await inter.send(embed=embed, ephemeral=False)
 
-            if len(residentsLookup["friends"]) != 0:
-                friendsString = Utils.CommandTools.list_to_string(list = residentsLookup["friends"])
+    except:
+      embed = Utils.Embeds.error_embed(
+          value=
+          "If it is not evident that the error was your fault, please report it",
+          footer=commandString)
 
-                embed.add_field(name = "Friends", value = f"```{friendsString[:1018]}```", inline = True)
+      await inter.send(embed=embed, ephemeral=True)
 
-            else:
-                embed.add_field(name = "Friends", value = f"{residentsLookup['strings']['username']} has no friends :(", inline = True)
-
-            await inter.send(embed = embed, ephemeral = False)
-
-        except:
-            embed = Utils.Embeds.error_embed(value = "If it is not evident that the error was your fault, please report it", footer = commandString)
-
-            await inter.send(embed = embed, ephemeral = True)
 
 def setup(bot):
-    bot.add_cog(ResCommand(bot))
+  bot.add_cog(ResCommand(bot))

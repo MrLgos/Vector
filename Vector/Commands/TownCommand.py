@@ -2,6 +2,7 @@ import random
 import math
 import requests
 import disnake
+import os
 from disnake.ext import commands
 import Utils.Utils as Utils
 from Paginator import CreatePaginator
@@ -60,6 +61,7 @@ class TownCommand(commands.Cog):
         joinedNationAt = "N/A"
 
       rnaoPermsList = Utils.CommandTools.rnao_perms(json=townsLookup)
+      TrueFalse_Flag = {True: "🟢", False: "🔴"}
 
       embed = Utils.Embeds.embed_builder(
           title=f"`{townsLookup['strings']['town']}`",
@@ -103,12 +105,12 @@ class TownCommand(commands.Cog):
       embed.add_field(
           name="Flags",
           value=
-          f"• `PvP` — {townsLookup['perms']['flagPerms']['pvp']}\n• `Explosions` — {townsLookup['perms']['flagPerms']['explosion']}\n• `Firespread` — {townsLookup['perms']['flagPerms']['fire']}\n• `Mob Spawns` — {townsLookup['perms']['flagPerms']['mobs']}",
+          f"• `PvP` — {TrueFalse_Flag[townsLookup['perms']['flagPerms']['pvp']]}\n• `Explosions` — {TrueFalse_Flag[townsLookup['perms']['flagPerms']['explosion']]}\n• `Firespread` — {TrueFalse_Flag[townsLookup['perms']['flagPerms']['fire']]}\n• `Mob Spawns` — {TrueFalse_Flag[townsLookup['perms']['flagPerms']['mobs']]}",
           inline=True)
       embed.add_field(
           name="Status",
           value=
-          f"• `Capital` — {townsLookup['status']['isCapital']}\n• `Open` — {townsLookup['status']['isOpen']}\n• `Public` — {townsLookup['status']['isPublic']}\n• `Neutral` — {townsLookup['status']['isNeutral']}\n• `Overclaimed` — {townsLookup['status']['isOverClaimed']}\n• `Ruined` — {townsLookup['status']['isRuined']}",
+          f"• `Capital` — {TrueFalse_Flag[townsLookup['status']['isCapital']]}\n• `Open` — {TrueFalse_Flag[townsLookup['status']['isOpen']]}\n• `Public` — {TrueFalse_Flag[townsLookup['status']['isPublic']]}\n• `Neutral` — {TrueFalse_Flag[townsLookup['status']['isNeutral']]}\n• `Overclaimed` — {TrueFalse_Flag[townsLookup['status']['isOverClaimed']]}\n• `Ruined` — {TrueFalse_Flag[townsLookup['status']['isRuined']]}",
           inline=True)
 
       await inter.send(embed=embed, ephemeral=False)
@@ -124,25 +126,36 @@ class TownCommand(commands.Cog):
   @town.sub_command(description="View all the falling towns")
   async def falling(self,
                     inter: disnake.ApplicationCommandInteraction,
+                    filter: str = commands.Param(
+                        description="Filter the falling towns",
+                        default="None",
+                        choices=["None", "open"]),
                     server: str = commands.Param(
                         description="Server name, defaults to Aurora",
                         default="aurora",
                         choices=["aurora"])):
-    commandString = f"/town falling server: {server}"
+    commandString = f"/town falling filter: {filter} server: {server}"
     await inter.response.defer()
     try:
-      url = "http://PUT_YOUR_OWN_SERVER_IP_HERE/logs/towns.txt"
-      res = requests.get(url)
-      if res.status_code == 200:
-        file_content = res.text
-        lines = file_content.split('\n')
-        formatted_lines = []
+      with open('./logs/towns.txt', 'r', encoding="utf-8") as f:
+        lines = f.readlines()
+      f.close()
+      formatted_lines = []
+      if filter == "None":
         for line in lines:
-          if line != "":
+          if line != "\n":
             formatted_lines.append(f"- {line}")
+      elif filter == "open":
+        cnt = 0
+        for line in lines:
+          if "[Open: True]" in line:
+            cnt = 5
+          if cnt > 0 and line != "\n":
+            formatted_lines.append(f"- {line}")
+            cnt -= 1
     except:
       embed = Utils.Embeds.error_embed(
-          value="Request url from FallingEventTimer error",
+          value="Read statistic file towns.txt error",
           type="userError",
           footer=commandString)
 
@@ -150,7 +163,7 @@ class TownCommand(commands.Cog):
       return
 
     try:
-      if len(res.text) < 5:
+      if len(lines) < 5:
         embed = Utils.Embeds.embed_builder(title="`Falling towns`",
                                            footer=commandString,
                                            author=inter.author)
@@ -162,18 +175,25 @@ class TownCommand(commands.Cog):
         await inter.send(embed=embed, ephemeral=True)
       else:
         cnt = 1
+        embed = Utils.Embeds.embed_builder(title="`Falling towns`",
+                                               footer=commandString,
+                                               author=inter.author)
         resString = ""
         embeds = []
         for town in formatted_lines:
-          resString = resString + town + '\n'
+          resString = resString + town
           if cnt % 5 == 0:
+            embed.add_field(name="Town", value=resString, inline=False)
+            resString = ""
+          if cnt % 25 == 0:
+            embeds.append(embed)
             embed = Utils.Embeds.embed_builder(title="`Falling towns`",
                                                footer=commandString,
                                                author=inter.author)
-            embed.add_field(name="Town", value=resString, inline=True)
-            embeds.append(embed)
-            resString = ""
           cnt += 1
+        cnt -= 1
+        if cnt % 25 != 0:
+          embeds.append(embed)
         await inter.send(embed=embeds[0], view=CreatePaginator(embeds))
     except:
       embed = Utils.Embeds.error_embed(
@@ -190,8 +210,7 @@ class TownCommand(commands.Cog):
                   inter: disnake.ApplicationCommandInteraction,
                   town: str = commands.Param(description="Town's name"),
                   nation: str = commands.Param(
-                      description="Your nation's name",
-                      default="None"),
+                      description="Your nation's name", default="None"),
                   server: str = commands.Param(
                       description="Server name, defaults to Aurora",
                       default="aurora",

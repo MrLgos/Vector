@@ -3,6 +3,7 @@ import disnake
 import requests
 import traceback
 import random
+import secrets
 import math
 import time
 
@@ -14,7 +15,7 @@ class CommandTools():
         "hasStorm"] == True & serverLookup["world"]["isThundering"] == True:
       weather = "Thundering"
     elif serverLookup["world"]["hasStorm"] == True:
-      weather = "Raining"
+      weather = "Raining/Snowing"
     else:
       weather = "Clear"
 
@@ -74,16 +75,18 @@ class CommandTools():
     return listString
 
   def NearbyNationRequest(x, z, allies):
-    bulkNationLookup = Lookup.lookup(server="aurora", endpoint="nations", version="v2")
+    bulkNationLookup = Lookup.lookup(server="aurora",
+                                     endpoint="nations",
+                                     version="v2")
     nations = {}
     sorted_nations = []
     for nation in bulkNationLookup:
-      if nation['name'] not in allies:
-        continue
-      nx = nation['spawn']['x']
-      nz = nation['spawn']['z']
-      dist = math.hypot(nx - x, nz - z)
-      nations[nation['name']] = dist
+        if nation['name'] not in allies or 'spawn' not in nation:
+          continue
+        nx = nation['spawn']['x']
+        nz = nation['spawn']['z']
+        dist = math.hypot(nx - x, nz - z)
+        nations[nation['name']] = dist
     sorted_nations = sorted(nations.items(), key=lambda item: item[1])
     return sorted_nations
 
@@ -110,13 +113,14 @@ class CommandTools():
 class Lookup():
 
   def lookup(server, endpoint=None, name=None, version="v1", opt="emc"):
+    randstr = secrets.token_hex(16)
     if opt == "emc":
       if endpoint == None:
-        api_url = f"https://api.earthmc.net/{version}/{server}/"
+        api_url = f"https://api.earthmc.net/{version}/{server}?{randstr}"
       elif name == None:
         api_url = f"https://api.earthmc.net/{version}/{server}/{endpoint}"
       else:
-        api_url = f"https://api.earthmc.net/{version}/{server}/{endpoint}/{name}"
+        api_url = f"https://api.earthmc.net/{version}/{server}/{endpoint}/{name}?{randstr}"
     elif opt == "toolkit":
       if name == None:
         if endpoint != 'serverinfo':

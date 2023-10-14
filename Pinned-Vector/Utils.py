@@ -3,6 +3,7 @@ import disnake
 import requests
 import traceback
 import random
+import secrets
 import math
 import time
 
@@ -34,7 +35,7 @@ class CommandTools():
     nations = {}
     sorted_nations = []
     for nation in bulkNationLookup:
-      if nation['name'] not in allies:
+      if nation['name'] not in allies or 'spawn' not in nation:
         continue
       nx = nation['spawn']['x']
       nz = nation['spawn']['z']
@@ -66,13 +67,14 @@ class CommandTools():
 class Lookup():
 
   def lookup(server, endpoint=None, name=None, version="v1", opt="emc"):
+    randstr = secrets.token_hex(16)
     if opt == "emc":
       if endpoint == None:
-        api_url = f"https://api.earthmc.net/{version}/{server}/"
+        api_url = f"https://api.earthmc.net/{version}/{server}?{randstr}"
       elif name == None:
         api_url = f"https://api.earthmc.net/{version}/{server}/{endpoint}"
       else:
-        api_url = f"https://api.earthmc.net/{version}/{server}/{endpoint}/{name}"
+        api_url = f"https://api.earthmc.net/{version}/{server}/{endpoint}/{name}?{randstr}"
     elif opt == "toolkit":
       if name == None:
         if endpoint != 'serverinfo':

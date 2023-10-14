@@ -2,6 +2,7 @@ from datetime import timedelta
 import random
 import requests
 import disnake
+import os
 from disnake.ext import commands
 import Utils.Utils as Utils
 
@@ -50,6 +51,7 @@ class NationCommand(commands.Cog):
 
     try:
       locationUrl = f"https://earthmc.net/map/{server}/?zoom=4&x={nationsLookup['spawn']['x']}&z={nationsLookup['spawn']['z']}"
+      TrueFalse_Flag = {True: "🟢", False: "🔴"}
 
       embed = Utils.Embeds.embed_builder(
           title=f"`{nationsLookup['strings']['nation']}`",
@@ -92,7 +94,7 @@ class NationCommand(commands.Cog):
       embed.add_field(
           name="Status",
           value=
-          f"• `Open` — {nationsLookup['status']['isOpen']}\n• `Public` — {nationsLookup['status']['isPublic']}\n• `Neutral` — {nationsLookup['status']['isNeutral']}",
+          f"• `Open` — {TrueFalse_Flag[nationsLookup['status']['isOpen']]}\n• `Public` — {TrueFalse_Flag[nationsLookup['status']['isPublic']]}\n• `Neutral` — {TrueFalse_Flag[nationsLookup['status']['isNeutral']]}",
           inline=True)
 
       await inter.send(embed=embed, ephemeral=False)
@@ -156,6 +158,10 @@ class NationCommand(commands.Cog):
       leader_rank = {}
       for n in nationsOnetimeLookup:
         nation_name = n["name"]
+        if "enemies" in n:
+          nation_enemy = n["enemies"]
+          if nation in nation_enemy:
+            continue
         leader_nation[n["king"]] = nation_name
         leader_rank[n["king"]] = "King"
         if "ranks" in n:
@@ -276,18 +282,16 @@ class NationCommand(commands.Cog):
     commandString = f"/nation falling server: {server}"
     await inter.response.defer()
     try:
-      url = "http://PUT_YOUR_OWN_SERVER_IP_HERE/logs/nations.txt"
-      res = requests.get(url)
-      if res.status_code == 200:
-        file_content = res.text
-        lines = file_content.split('\n')
-        formatted_lines = []
-        for line in lines:
-          if line != "":
-            formatted_lines.append(f"- {line}")
+      with open('./logs/nations.txt', 'r', encoding="utf-8") as f:
+        lines = f.readlines()
+      f.close()
+      formatted_lines = []
+      for line in lines:
+        if line != "\n":
+          formatted_lines.append(f"- {line}")
     except:
       embed = Utils.Embeds.error_embed(
-          value="Request url from FallingEventTimer error",
+          value="Read statistic file nations.txt error",
           type="userError",
           footer=commandString)
 
@@ -295,7 +299,7 @@ class NationCommand(commands.Cog):
       return
 
     try:
-      if len(res.text) < 5:
+      if len(lines) < 5:
         embed = Utils.Embeds.embed_builder(title="`Falling nations`",
                                            footer=commandString,
                                            author=inter.author)
@@ -307,18 +311,25 @@ class NationCommand(commands.Cog):
         await inter.send(embed=embed, ephemeral=True)
       else:
         cnt = 1
+        embed = Utils.Embeds.embed_builder(title="`Falling nations`",
+                                               footer=commandString,
+                                               author=inter.author)
         resString = ""
         embeds = []
-        for town in formatted_lines:
-          resString = resString + town + '\n'
+        for nation in formatted_lines:
+          resString = resString + nation
           if cnt % 5 == 0:
+            embed.add_field(name="Nation", value=resString, inline=False)
+            resString = ""
+          if cnt % 15 == 0:
+            embeds.append(embed)
             embed = Utils.Embeds.embed_builder(title="`Falling nations`",
                                                footer=commandString,
                                                author=inter.author)
-            embed.add_field(name="Nation", value=resString, inline=True)
-            embeds.append(embed)
-            resString = ""
           cnt += 1
+        cnt -= 1
+        if cnt % 15 != 0:
+          embeds.append(embed)
         await inter.send(embed=embeds[0], view=CreatePaginator(embeds))
     except:
       embed = Utils.Embeds.error_embed(

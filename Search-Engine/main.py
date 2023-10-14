@@ -3,6 +3,7 @@ import os
 import shutil
 import time
 import threading
+import secrets
 import requests
 from datetime import datetime
 from time import strftime
@@ -27,9 +28,11 @@ def timeTransfer(TimeStamp):
 
 
 def townRequest(town):
-  url = f"https://api.earthmc.net/v2/aurora/towns/{town}"
+  randstr = secrets.token_hex(16)
+  url = f"https://api.earthmc.net/v2/aurora/towns/{town}?{randstr}"
   resNum = 0
   try:
+    mayor = None
     townsLookup = requests.get(url).json()
     mayor = townsLookup['mayor']
     is_ruined = townsLookup['status']['isRuined']
@@ -50,12 +53,14 @@ def townRequest(town):
             f.write(f'{town} {town_size} {location}\n')
         f.close()
       return
-    x = int(townsLookup['coordinates']['spawn']['x'])
-    z = int(townsLookup['coordinates']['spawn']['z'])
+    if 'spawn' in townsLookup['coordinates']:
+      x = int(townsLookup['coordinates']['spawn']['x'])
+      z = int(townsLookup['coordinates']['spawn']['z'])
     town_size = townsLookup['stats']['numTownBlocks']
     resNum = townsLookup['stats']['numResidents']
     bank = townsLookup['stats']['balance']
-    nation = townsLookup['nation']
+    if 'nation' in townsLookup:
+      nation = townsLookup['nation']
   except Exception as e:
     print(e)
   if resNum <= 2:
@@ -66,7 +71,7 @@ def townRequest(town):
       print(e)
     lastOnline_TimeStamp = mayorLookup['timestamps']['lastOnline'] / 1000
     d, h, m, s = timeTransfer(lastOnline_TimeStamp)
-    if d >= 37 and d <= 45 and is_ruined == False:
+    if d >= 30 and d <= 45 and is_ruined == False:
       with open('data/towns.txt', 'a+', encoding="utf-8") as f:
         f.write(
                 "Town: %s [Nation: %s][Open: %s]\nBank: %dG [Chunks: %d]\nMayor: %s [Residents: %d]\nOffline since %d days %d hours %d minutes %d seconds.\ndynmap URL: [%d, %d](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=%d&z=%d)\n\n"
@@ -75,7 +80,8 @@ def townRequest(town):
 
 
 def nationRequest(nation):
-  nurl = f"https://api.earthmc.net/v2/aurora/nations/{nation}"
+  randstr = secrets.token_hex(16)
+  nurl = f"https://api.earthmc.net/v2/aurora/nations/{nation}?{randstr}"
   try:
     nationsLookup = requests.get(nurl).json()
     capital = nationsLookup['capital']
@@ -83,13 +89,14 @@ def nationRequest(nation):
     bank = nationsLookup['stats']['balance']
     townCount = len(nationsLookup['towns'])
     king = nationsLookup['king']
-    turl = f"https://api.earthmc.net/v2/aurora/towns/{capital}"
+    turl = f"https://api.earthmc.net/v2/aurora/towns/{capital}?{randstr}"
     capitalLookup = requests.get(turl).json()
-    x = capitalLookup['coordinates']['spawn']['x']
-    z = capitalLookup['coordinates']['spawn']['z']
+    if 'spawn' in capitalLookup['coordinates']:
+      x = capitalLookup['coordinates']['spawn']['x']
+      z = capitalLookup['coordinates']['spawn']['z']
     is_capital_open = capitalLookup['status']['isOpen']
     resNum = capitalLookup['stats']['numResidents']
-    kurl = f"https://api.earthmc.net/v2/aurora/residents/{king}"
+    kurl = f"https://api.earthmc.net/v2/aurora/residents/{king}?{randstr}"
     if resNum <= 3:
       kingLookup = requests.get(kurl).json()
       lastOnline_TimeStamp = kingLookup['timestamps']['lastOnline'] / 1000
@@ -105,8 +112,9 @@ def nationRequest(nation):
 
 
 def Query_Falling_Towns():
+  randstr = secrets.token_hex(16)
   allTownsLookup = requests.get(
-      "https://api.earthmc.net/v1/aurora/towns/").json()
+      f"https://api.earthmc.net/v1/aurora/towns?{randstr}").json()
   allTowns = allTownsLookup["allTowns"]
   total_requests = len(allTowns)
   if os.path.exists("./data/towns.txt"):
@@ -133,8 +141,9 @@ def Query_Falling_Towns():
 
 
 def Query_Falling_Nations():
+  randstr = secrets.token_hex(16)
   allNationsLookup = requests.get(
-      "https://api.earthmc.net/v1/aurora/nations/").json()
+      f"https://api.earthmc.net/v1/aurora/nations?{randstr}").json()
   allNations = allNationsLookup["allNations"]
   total_requests = len(allNations)
   if os.path.exists("./data/nations.txt"):
