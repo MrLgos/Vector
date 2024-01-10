@@ -40,14 +40,17 @@ Thanks for your support.
 |   |-- ResCommand.py
 |   |-- ServerCommand.py
 |   `-- TownCommand.py
-|-- LICENSE
-|-- README.md
 |-- Utils
 |   `-- Utils.py      # Tools.
 |-- keep_alive.py     # Optional. Free cloud server like replit, will need this.
 |-- logs
 |   `-- cemetery.txt  # Store fallen towns that have been outputted.
-`-- main.py
+|   |-- nations.txt
+|   `-- towns.txt
+|-- main.py
+|-- requirements.txt
+|-- Vector.env        # Store secrets like TOKEN..
+`-- start.sh
 ```
 
 **1.2 Pinned-Vector structure/** Based on Vector
