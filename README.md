@@ -1,5 +1,5 @@
 <h1 align="center">
-  <a href="https://discord.gg/yG7GSrGcbS"><img src="https://cdn.discordapp.com/attachments/1078305413503651932/1152506659843887164/IMG_6490.jpg" alt="Moon by Lgos"></a>
+  <a href="https://discord.gg/yG7GSrGcbS"><img src="https://i.postimg.cc/dqM7Q9SP/IMG-6490.jpg" alt="Moon by Lgos"></a>
   <br>
   <font color="#000000">V</font><font color="#333333">e</font><font color="#666666">c</font><font color="#999999">t</font><font color="#CCCCCC">or</font>
   <br>
