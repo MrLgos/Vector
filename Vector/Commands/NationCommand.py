@@ -274,12 +274,9 @@ class NationCommand(commands.Cog):
 
   @nation.sub_command(description="View all the falling nations")
   async def falling(self,
-                    inter: disnake.ApplicationCommandInteraction,
-                    server: str = commands.Param(
-                        description="Server name, defaults to Aurora",
-                        default="aurora",
-                        choices=["aurora"])):
-    commandString = f"/nation falling server: {server}"
+                    inter: disnake.ApplicationCommandInteraction
+                    ):
+    commandString = f"/nation falling"
     await inter.response.defer()
     try:
       with open('./logs/nations.txt', 'r', encoding="utf-8") as f:

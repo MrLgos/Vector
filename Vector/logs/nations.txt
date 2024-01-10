@@ -1,0 +1,60 @@
+Nation: Krasnojarsk [Nation Open: False][Capital Open: False]
+Bank: 0G [Towns: 1]
+King: Mr_M0nger [Capital Residents: 1]
+Offline since 39 days 2 hours 59 minutes 21 seconds.
+dynmap URL: [14769, -13686](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=14769&z=-13686)
+
+Nation: 2.1NeedNewName [Nation Open: False][Capital Open: False]
+Bank: 0G [Towns: 2]
+King: EggBender [Capital Residents: 2]
+Offline since 30 days 23 hours 12 minutes 18 seconds.
+dynmap URL: [6247, -9681](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=6247&z=-9681)
+
+Nation: troll [Nation Open: True][Capital Open: True]
+Bank: 1000G [Towns: 2]
+King: LasevIX_ [Capital Residents: 2]
+Offline since 31 days 12 hours 56 minutes 29 seconds.
+dynmap URL: [543, 13624](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=543&z=13624)
+
+Nation: Yamalo [Nation Open: True][Capital Open: True]
+Bank: 0G [Towns: 1]
+King: Sleepy8112 [Capital Residents: 2]
+Offline since 38 days 5 hours 6 minutes 13 seconds.
+dynmap URL: [12222, -11913](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=12222&z=-11913)
+
+Nation: majapahit [Nation Open: False][Capital Open: False]
+Bank: 0G [Towns: 1]
+King: 1INFAMOUS5 [Capital Residents: 1]
+Offline since 39 days 9 hours 16 minutes 43 seconds.
+dynmap URL: [17879, -251](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=17879&z=-251)
+
+Nation: 2.1NationNamePls [Nation Open: False][Capital Open: False]
+Bank: 279G [Towns: 1]
+King: zenmaikun_dayo [Capital Residents: 1]
+Offline since 37 days 17 hours 32 minutes 21 seconds.
+dynmap URL: [-19016, 13335](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=-19016&z=13335)
+
+Nation: Kenya [Nation Open: True][Capital Open: True]
+Bank: 0G [Towns: 2]
+King: Chipskruemel7 [Capital Residents: 2]
+Offline since 40 days 5 hours 15 minutes 15 seconds.
+dynmap URL: [6647, 112](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=6647&z=112)
+
+Nation: Nebraska [Nation Open: True][Capital Open: True]
+Bank: 0G [Towns: 1]
+King: thenewpyro [Capital Residents: 1]
+Offline since 30 days 0 hours 3 minutes 34 seconds.
+dynmap URL: [-18008, -7703](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=-18008&z=-7703)
+
+Nation: Oman [Nation Open: False][Capital Open: False]
+Bank: 0G [Towns: 1]
+King: blaia01 [Capital Residents: 1]
+Offline since 38 days 1 hours 52 minutes 58 seconds.
+dynmap URL: [10083, -3466](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=10083&z=-3466)
+
+Nation: Bokkai [Nation Open: False][Capital Open: False]
+Bank: 0G [Towns: 1]
+King: yanei [Capital Residents: 1]
+Offline since 34 days 14 hours 45 minutes 22 seconds.
+dynmap URL: [24662, -9028](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=24662&z=-9028)
+

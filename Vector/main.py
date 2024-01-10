@@ -5,15 +5,17 @@ import requests
 import dotenv
 import Utils.Utils as Utils
 import threading
-from EarthMC import Maps, OfficialAPI
-from keep_alive import keep_alive
+from EarthMC import Maps
+from googletrans import Translator
 
-keep_alive()
 Aurora = Maps.Aurora()
-intents = disnake.Intents.default()
-intents.members = True
+dotenv.load_dotenv("Vector.env")
+intents = disnake.Intents.all()
 bot = commands.InteractionBot(intents=intents)
 flag = 0
+service_urls = ['translate.google.cn', 'translate.google.com']
+proxies = {'http': "localhost:80"}
+translator = Translator(service_urls=['translate.google.com'], proxies=proxies)
 
 
 @tasks.loop(seconds=30)
@@ -133,7 +135,8 @@ async def server():
     weather = Utils.CommandTools.get_weather(serverLookup)
     if flag == 0 and weather == "Thundering":
       flag = 1
-      await ping_channel.send(f"Weather forecast: thunderstorms! {thor_role.mention}")
+      await ping_channel.send(
+          f"Weather forecast: thunderstorms! {thor_role.mention}")
     elif flag == 1 and weather != "Thundering":
       flag = 0
       await ping_channel.send("The thunderstorm is over.")
@@ -168,8 +171,8 @@ async def on_raw_reaction_add(payload):
 
     if role and member:
       await member.add_roles(role)
-      print(f'{member.display_name} 被授予了角色 {role.name}')
-      
+      print(f'{member.display_name} is granted Role {role.name}')
+
   if message_id == 1154830519381524521 and emoji == '✨':
     guild = bot.get_guild(guild_id)
     member = guild.get_member(user_id)
@@ -177,7 +180,7 @@ async def on_raw_reaction_add(payload):
 
     if role and member:
       await member.add_roles(role)
-      print(f'{member.display_name} 被授予了角色 {role.name}')
+      print(f'{member.display_name} is granted Role {role.name}')
 
 
 @bot.event
@@ -191,20 +194,32 @@ async def on_raw_reaction_remove(payload):
     guild = bot.get_guild(guild_id)
     member = guild.get_member(user_id)
     role = disnake.utils.get(guild.roles, name='Thor')
-    
+
     if role and member:
       await member.remove_roles(role)
-      print(f'{member.display_name} 的角色 {role.name} 已被移除')
+      print(f"{member.display_name} 's Role {role.name} has been removed")
 
   if message_id == 1154830519381524521 and emoji == '✨':
     guild = bot.get_guild(guild_id)
     member = guild.get_member(user_id)
     role = disnake.utils.get(guild.roles, name='Vote-Party')
-    
+
     if role and member:
       await member.remove_roles(role)
-      print(f'{member.display_name} 的角色 {role.name} 已被移除')
+      print(f"{member.display_name} 's Role {role.name} has been removed")
 
+@bot.event
+async def on_message(message):
+  if message.author == bot.user:
+    return
+  if message.channel.id == 1176917443256529038:
+    detected_language = translator.detect(message.content).lang
+    trans_prefix = translator.translate("Translation",
+                                        dest=detected_language).text
+    if detected_language == 'en':
+      return  
+    trans_result = translator.translate(message.content, dest='en').text
+    await message.channel.send(f"[{trans_prefix}] {trans_result}")
 
 bot.load_extension("Commands.ServerCommand")
 bot.load_extension("Commands.ResCommand")

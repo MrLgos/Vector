@@ -140,62 +140,6 @@ class ResCommand(commands.Cog):
 
       await inter.send(embed=embed, ephemeral=True)
 
-  @res.sub_command(description="View all the friends of a specified resident")
-  async def friendlist(
-      self,
-      inter: disnake.ApplicationCommandInteraction,
-      username: str = commands.Param(description="Resident's username"),
-      server: str = commands.Param(
-          description="Server name, defaults to Aurora",
-          default="aurora",
-          choices=["aurora"])):
-    commandString = f"/res friendlist username: {username} server: {server}"
-    await inter.response.defer()
-    try:
-      residentsLookup = Utils.Lookup.lookup(server.lower(),
-                                            endpoint="residents",
-                                            name=username)
-
-    except:
-      embed = Utils.Embeds.error_embed(
-          value=
-          "Check if you wrote a parameter incorrectly or if the server is currently offline",
-          type="userError",
-          footer=commandString)
-
-      await inter.send(embed=embed, ephemeral=True)
-      return
-
-    try:
-      embed = Utils.Embeds.embed_builder(
-          title=f"`{residentsLookup['strings']['username']}'s Friends`",
-          footer=commandString,
-          author=inter.author)
-
-      if len(residentsLookup["friends"]) != 0:
-        friendsString = Utils.CommandTools.list_to_string(
-            list=residentsLookup["friends"])
-
-        embed.add_field(name="Friends",
-                        value=f"```{friendsString[:1018]}```",
-                        inline=True)
-
-      else:
-        embed.add_field(
-            name="Friends",
-            value=f"{residentsLookup['strings']['username']} has no friends :(",
-            inline=True)
-
-      await inter.send(embed=embed, ephemeral=False)
-
-    except:
-      embed = Utils.Embeds.error_embed(
-          value=
-          "If it is not evident that the error was your fault, please report it",
-          footer=commandString)
-
-      await inter.send(embed=embed, ephemeral=True)
-
 
 def setup(bot):
   bot.add_cog(ResCommand(bot))

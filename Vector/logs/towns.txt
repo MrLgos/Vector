@@ -1,0 +1,534 @@
+Town: North_Pole [Nation: Kitikmeot][Open: False]
+Bank: 6G [Chunks: 34]
+Mayor: AverageTeenDad [Residents: 1]
+Offline since 41 days 14 hours 22 minutes 8 seconds.
+dynmap URL: [-19524, -14762](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=-19524&z=-14762)
+
+Town: Shymkent [Nation: Kazakhstan][Open: False]
+Bank: 0G [Chunks: 78]
+Mayor: Onagoid [Residents: 1]
+Offline since 39 days 5 hours 11 minutes 59 seconds.
+dynmap URL: [12198, -7805](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=12198&z=-7805)
+
+Town: new_Olofort [Nation: Antarctica][Open: True]
+Bank: 0G [Chunks: 28]
+Mayor: KippyMaster [Residents: 1]
+Offline since 30 days 17 hours 51 minutes 54 seconds.
+dynmap URL: [-12550, 12743](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=-12550&z=12743)
+
+Town: Quietus [Nation: Chad][Open: False]
+Bank: 0G [Chunks: 4]
+Mayor: Cottoncrusher [Residents: 1]
+Offline since 31 days 22 hours 39 minutes 36 seconds.
+dynmap URL: [3130, -1589](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=3130&z=-1589)
+
+Town: Bereznik [Nation: Russian_Dominion][Open: False]
+Bank: 7G [Chunks: 8]
+Mayor: Pletcorez [Residents: 1]
+Offline since 33 days 12 hours 58 minutes 54 seconds.
+dynmap URL: [8037, -12149](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=8037&z=-12149)
+
+Town: semipalatinsk [Nation: Kazakhstan][Open: False]
+Bank: 2G [Chunks: 14]
+Mayor: 3_guis [Residents: 1]
+Offline since 39 days 21 hours 17 minutes 18 seconds.
+dynmap URL: [14300, -9442](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=14300&z=-9442)
+
+Town: Port_Laptev [Nation: Kitikmeot][Open: False]
+Bank: 0G [Chunks: 50]
+Mayor: SygmabladeMC [Residents: 1]
+Offline since 42 days 5 hours 24 minutes 49 seconds.
+dynmap URL: [-18696, -13591](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=-18696&z=-13591)
+
+Town: Flora [Nation: America][Open: False]
+Bank: 108G [Chunks: 88]
+Mayor: Batrusjka [Residents: 1]
+Offline since 39 days 11 hours 35 minutes 21 seconds.
+dynmap URL: [-11027, 5826](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=-11027&z=5826)
+
+Town: Arand [Nation: Spain][Open: False]
+Bank: 0G [Chunks: 55]
+Mayor: Garnecki [Residents: 2]
+Offline since 31 days 3 hours 34 minutes 12 seconds.
+dynmap URL: [-855, -6548](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=-855&z=-6548)
+
+Town: Snow [Nation: Antarctica][Open: False]
+Bank: 0G [Chunks: 5]
+Mayor: soccerboy5 [Residents: 1]
+Offline since 37 days 0 hours 24 minutes 50 seconds.
+dynmap URL: [-12838, 12303](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=-12838&z=12303)
+
+Town: Varna [Nation: Bulgaria][Open: False]
+Bank: 0G [Chunks: 603]
+Mayor: Staskata_ [Residents: 1]
+Offline since 30 days 10 hours 17 minutes 8 seconds.
+dynmap URL: [4956, -8121](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=4956&z=-8121)
+
+Town: october [Nation: severnaya][Open: True]
+Bank: 0G [Chunks: 1]
+Mayor: iovve [Residents: 2]
+Offline since 41 days 11 hours 37 minutes 6 seconds.
+dynmap URL: [18138, -14769](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=18138&z=-14769)
+
+Town: Downtown_Mali [Nation: Mali][Open: False]
+Bank: 13G [Chunks: 74]
+Mayor: Xevfq [Residents: 1]
+Offline since 34 days 10 hours 52 minutes 28 seconds.
+dynmap URL: [-1528, -2087](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=-1528&z=-2087)
+
+Town: Abu_Simbel [Nation: Chad][Open: False]
+Bank: 0G [Chunks: 5]
+Mayor: zDqrkn [Residents: 1]
+Offline since 40 days 7 hours 36 minutes 21 seconds.
+dynmap URL: [5672, -4290](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=5672&z=-4290)
+
+Town: ÐÐµÑÐ¼Ñ [Nation: Scythia][Open: False]
+Bank: 117G [Chunks: 8]
+Mayor: yippir [Residents: 2]
+Offline since 37 days 15 hours 18 minutes 34 seconds.
+dynmap URL: [8994, -10084](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=8994&z=-10084)
+
+Town: st_louie [Nation: Russian_Republic][Open: False]
+Bank: 35G [Chunks: 54]
+Mayor: HairySlong [Residents: 1]
+Offline since 40 days 1 hours 13 minutes 0 seconds.
+dynmap URL: [16001, -9633](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=16001&z=-9633)
+
+Town: Blumenau [Nation: America][Open: True]
+Bank: 0G [Chunks: 5]
+Mayor: hadrianetc [Residents: 1]
+Offline since 35 days 19 hours 45 minutes 35 seconds.
+dynmap URL: [-9223, 4860](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=-9223&z=4860)
+
+Town: yep [Nation: St_Pierre][Open: False]
+Bank: 0G [Chunks: 1]
+Mayor: Nitro_prime [Residents: 2]
+Offline since 34 days 16 hours 33 minutes 14 seconds.
+dynmap URL: [28694, -11423](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=28694&z=-11423)
+
+Town: Enamza [Nation: Turkey][Open: False]
+Bank: 3G [Chunks: 17]
+Mayor: EnesHamza [Residents: 1]
+Offline since 39 days 10 hours 16 minutes 9 seconds.
+dynmap URL: [6072, -7784](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=6072&z=-7784)
+
+Town: Palo [Nation: Patagonia][Open: True]
+Bank: 0G [Chunks: 21]
+Mayor: Hitmeupjulio [Residents: 1]
+Offline since 39 days 4 hours 57 minutes 37 seconds.
+dynmap URL: [-12792, 9118](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=-12792&z=9118)
+
+Town: Penguin_Point [Nation: SGSSI][Open: False]
+Bank: 23G [Chunks: 4]
+Mayor: AKKIOSS [Residents: 1]
+Offline since 39 days 2 hours 21 minutes 13 seconds.
+dynmap URL: [-8691, 11067](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=-8691&z=11067)
+
+Town: Guizhou [Nation: Shu][Open: True]
+Bank: 102G [Chunks: 30]
+Mayor: marky6 [Residents: 1]
+Offline since 36 days 20 hours 37 minutes 45 seconds.
+dynmap URL: [19767, -5322](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=19767&z=-5322)
+
+Town: School_Penguins [Nation: 2.1NationNamePls][Open: False]
+Bank: 150G [Chunks: 154]
+Mayor: zenmaikun_dayo [Residents: 1]
+Offline since 37 days 17 hours 23 minutes 25 seconds.
+dynmap URL: [-19016, 13335](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=-19016&z=13335)
+
+Town: CautÃ­n [Nation: Patagonia][Open: True]
+Bank: 0G [Chunks: 37]
+Mayor: zzb_news [Residents: 1]
+Offline since 30 days 17 hours 59 minutes 50 seconds.
+dynmap URL: [-13615, 7040](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=-13615&z=7040)
+
+Town: Zapala [Nation: America][Open: True]
+Bank: 1G [Chunks: 86]
+Mayor: wesley9487 [Residents: 1]
+Offline since 39 days 10 hours 44 minutes 30 seconds.
+dynmap URL: [-12840, 7672](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=-12840&z=7672)
+
+Town: St_Sinburg [Nation: Genoa][Open: False]
+Bank: 86G [Chunks: 9]
+Mayor: PuffyFlakes77 [Residents: 2]
+Offline since 30 days 4 hours 55 minutes 8 seconds.
+dynmap URL: [2628, -6037](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=2628&z=-6037)
+
+Town: egersund [Nation: Ireland][Open: False]
+Bank: 6G [Chunks: 4]
+Mayor: OrkSlayer360 [Residents: 1]
+Offline since 30 days 3 hours 15 minutes 53 seconds.
+dynmap URL: [903, -10983](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=903&z=-10983)
+
+Town: rainbow [Nation: ava][Open: True]
+Bank: 0G [Chunks: 2]
+Mayor: starwolfguy2012 [Residents: 1]
+Offline since 32 days 9 hours 35 minutes 12 seconds.
+dynmap URL: [17107, -4109](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=17107&z=-4109)
+
+Town: KaszÃ«bÃ« [Nation: Poland][Open: True]
+Bank: 7G [Chunks: 53]
+Mayor: yutoalpha [Residents: 1]
+Offline since 36 days 15 hours 31 minutes 48 seconds.
+dynmap URL: [3173, -9991](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=3173&z=-9991)
+
+Town: Pomorze [Nation: Poland][Open: True]
+Bank: 77G [Chunks: 114]
+Mayor: AlmightyWindows [Residents: 2]
+Offline since 30 days 15 hours 29 minutes 56 seconds.
+dynmap URL: [3079, -10236](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=3079&z=-10236)
+
+Town: Ruijin [Nation: Wei][Open: True]
+Bank: 452G [Chunks: 156]
+Mayor: Windy_Field [Residents: 2]
+Offline since 35 days 12 hours 3 minutes 49 seconds.
+dynmap URL: [20935, -5277](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=20935&z=-5277)
+
+Town: Dickson [Nation: Krasnojarsk][Open: False]
+Bank: 50G [Chunks: 91]
+Mayor: Mr_M0nger [Residents: 1]
+Offline since 39 days 2 hours 51 minutes 39 seconds.
+dynmap URL: [14769, -13686](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=14769&z=-13686)
+
+Town: ponta_delgada [Nation: Portugal][Open: False]
+Bank: 10G [Chunks: 36]
+Mayor: Smashy_Crafter [Residents: 1]
+Offline since 42 days 7 hours 37 minutes 29 seconds.
+dynmap URL: [-4941, -7116](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=-4941&z=-7116)
+
+Town: Pokemon [Nation: New_Guinea][Open: True]
+Bank: 0G [Chunks: 182]
+Mayor: alcedo168 [Residents: 1]
+Offline since 37 days 17 hours 19 minutes 33 seconds.
+dynmap URL: [25944, 935](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=25944&z=935)
+
+Town: Kongolo [Nation: Tanzania][Open: False]
+Bank: 0G [Chunks: 32]
+Mayor: _res_tp_fms [Residents: 1]
+Offline since 30 days 6 hours 34 minutes 31 seconds.
+dynmap URL: [4648, 1473](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=4648&z=1473)
+
+Town: New_Mexico [Nation: Iowa][Open: True]
+Bank: 0G [Chunks: 1]
+Mayor: ViperGamer1008 [Residents: 2]
+Offline since 35 days 1 hours 14 minutes 41 seconds.
+dynmap URL: [-20226, -6719](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=-20226&z=-6719)
+
+Town: Quebec [Nation: Laurentia][Open: True]
+Bank: 0G [Chunks: 1]
+Mayor: storx33 [Residents: 1]
+Offline since 41 days 9 hours 2 minutes 21 seconds.
+dynmap URL: [-14103, -11619](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=-14103&z=-11619)
+
+Town: Oniyama [Nation: Bokkai][Open: False]
+Bank: 171G [Chunks: 168]
+Mayor: yanei [Residents: 1]
+Offline since 34 days 14 hours 37 minutes 23 seconds.
+dynmap URL: [24662, -9028](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=24662&z=-9028)
+
+Town: Nuuk [Nation: Greenland][Open: True]
+Bank: 13G [Chunks: 20]
+Mayor: TheHenstigator [Residents: 2]
+Offline since 36 days 10 hours 46 minutes 39 seconds.
+dynmap URL: [-9784, -12013](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=-9784&z=-12013)
+
+Town: Lahad_Datu [Nation: Indochina][Open: False]
+Bank: 163G [Chunks: 56]
+Mayor: Maroje [Residents: 1]
+Offline since 35 days 6 hours 26 minutes 13 seconds.
+dynmap URL: [21712, -1056](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=21712&z=-1056)
+
+Town: leonidas [Nation: majapahit][Open: False]
+Bank: 0G [Chunks: 58]
+Mayor: 1INFAMOUS5 [Residents: 1]
+Offline since 39 days 9 hours 9 minutes 57 seconds.
+dynmap URL: [17879, -251](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=17879&z=-251)
+
+Town: Saint_Ovlexwood [Nation: USA][Open: False]
+Bank: 15G [Chunks: 48]
+Mayor: VultureSwift [Residents: 1]
+Offline since 30 days 19 hours 45 minutes 24 seconds.
+dynmap URL: [-18244, -10527](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=-18244&z=-10527)
+
+Town: amogus [Nation: troll][Open: True]
+Bank: 5G [Chunks: 81]
+Mayor: LasevIX_ [Residents: 2]
+Offline since 31 days 12 hours 50 minutes 28 seconds.
+dynmap URL: [543, 13624](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=543&z=13624)
+
+Town: Royal_High [Nation: Alberta][Open: False]
+Bank: 0G [Chunks: 8]
+Mayor: Lily_Nilly [Residents: 1]
+Offline since 32 days 4 hours 52 minutes 20 seconds.
+dynmap URL: [-20233, -11964](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=-20233&z=-11964)
+
+Town: Crete [Nation: Greece][Open: False]
+Bank: 0G [Chunks: 134]
+Mayor: DekuFullCowling [Residents: 1]
+Offline since 41 days 19 hours 55 minutes 46 seconds.
+dynmap URL: [4388, -6615](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=4388&z=-6615)
+
+Town: Gardaya [Nation: Algeria][Open: False]
+Bank: 0G [Chunks: 4]
+Mayor: Kr3atif [Residents: 1]
+Offline since 32 days 4 hours 48 minutes 46 seconds.
+dynmap URL: [329, -6185](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=329&z=-6185)
+
+Town: hokkyoku [Nation: Ronne][Open: False]
+Bank: 893G [Chunks: 8]
+Mayor: HARUMA11 [Residents: 1]
+Offline since 33 days 15 hours 48 minutes 3 seconds.
+dynmap URL: [-10006, 14592](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=-10006&z=14592)
+
+Town: Vietka [Nation: Polesia][Open: False]
+Bank: 0G [Chunks: 17]
+Mayor: Soinsu3 [Residents: 1]
+Offline since 31 days 21 hours 31 minutes 46 seconds.
+dynmap URL: [5549, -10187](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=5549&z=-10187)
+
+Town: Jamestown [Nation: Sri_Lanka][Open: False]
+Bank: 620G [Chunks: 88]
+Mayor: Samonella_12 [Residents: 1]
+Offline since 37 days 5 hours 15 minutes 11 seconds.
+dynmap URL: [14545, -3568](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=14545&z=-3568)
+
+Town: Mt._Rainier [Nation: Cascadia][Open: True]
+Bank: 0G [Chunks: 30]
+Mayor: Arcturus430 [Residents: 1]
+Offline since 30 days 21 hours 46 minutes 52 seconds.
+dynmap URL: [-22694, -8805](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=-22694&z=-8805)
+
+Town: Boss_Kingdom [Nation: Laurentia][Open: False]
+Bank: 0G [Chunks: 8]
+Mayor: 109487boss [Residents: 1]
+Offline since 41 days 23 hours 37 minutes 24 seconds.
+dynmap URL: [-13799, -12344](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=-13799&z=-12344)
+
+Town: Aceh [Nation: Indochina][Open: False]
+Bank: 9G [Chunks: 228]
+Mayor: ImMagnum [Residents: 1]
+Offline since 34 days 22 hours 0 minutes 51 seconds.
+dynmap URL: [17427, -1147](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=17427&z=-1147)
+
+Town: Trumpville [Nation: US][Open: False]
+Bank: 25G [Chunks: 8]
+Mayor: PeterPeter5000 [Residents: 1]
+Offline since 32 days 1 hours 17 minutes 21 seconds.
+dynmap URL: [-18281, -8260](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=-18281&z=-8260)
+
+Town: Timurid_Empire [Nation: Himalayas][Open: True]
+Bank: 0G [Chunks: 213]
+Mayor: DEMON_Lodos [Residents: 2]
+Offline since 39 days 9 hours 36 minutes 47 seconds.
+dynmap URL: [10071, -6702](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=10071&z=-6702)
+
+Town: MaracaÃ­bo [Nation: Maracaibo][Open: True]
+Bank: 0G [Chunks: 1]
+Mayor: TNT_Ben001 [Residents: 2]
+Offline since 35 days 6 hours 1 minutes 37 seconds.
+dynmap URL: [-13496, -2128](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=-13496&z=-2128)
+
+Town: Kibete [Nation: Tanzania][Open: False]
+Bank: 4G [Chunks: 13]
+Mayor: CrustiesAuto61 [Residents: 2]
+Offline since 37 days 4 hours 50 minutes 47 seconds.
+dynmap URL: [6055, 1783](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=6055&z=1783)
+
+Town: Cabo [Nation: America][Open: False]
+Bank: 0G [Chunks: 15]
+Mayor: CoolDabingDantdm [Residents: 1]
+Offline since 30 days 14 hours 29 minutes 56 seconds.
+dynmap URL: [-11927, 5484](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=-11927&z=5484)
+
+Town: Kolchanovo [Nation: Russian_Empire][Open: False]
+Bank: 0G [Chunks: 256]
+Mayor: TsarinaAndrea [Residents: 1]
+Offline since 31 days 8 hours 8 minutes 51 seconds.
+dynmap URL: [5862, -11450](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=5862&z=-11450)
+
+Town: Montina [Nation: Canada][Open: True]
+Bank: 11G [Chunks: 12]
+Mayor: stevethepillager [Residents: 1]
+Offline since 32 days 1 hours 28 minutes 32 seconds.
+dynmap URL: [-14680, -10308](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=-14680&z=-10308)
+
+Town: MK_town [Nation: Yamato][Open: True]
+Bank: 0G [Chunks: 47]
+Mayor: MK4649 [Residents: 2]
+Offline since 40 days 17 hours 2 minutes 46 seconds.
+dynmap URL: [24322, -9474](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=24322&z=-9474)
+
+Town: Sarand [Nation: Carpathia][Open: True]
+Bank: 0G [Chunks: 1]
+Mayor: Klixim [Residents: 1]
+Offline since 31 days 8 hours 50 minutes 18 seconds.
+dynmap URL: [3559, -8856](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=3559&z=-8856)
+
+Town: Kursk [Nation: 2.1NeedNewName][Open: False]
+Bank: 0G [Chunks: 115]
+Mayor: EggBender [Residents: 2]
+Offline since 30 days 23 hours 8 minutes 33 seconds.
+dynmap URL: [6247, -9681](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=6247&z=-9681)
+
+Town: Shadow_Village [Nation: NC][Open: False]
+Bank: 0G [Chunks: 13]
+Mayor: DStiltz [Residents: 1]
+Offline since 41 days 2 hours 2 minutes 7 seconds.
+dynmap URL: [-24888, -12419](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=-24888&z=-12419)
+
+Town: Vesta [Nation: Norway][Open: True]
+Bank: 80G [Chunks: 68]
+Mayor: WhiteEdelweissII [Residents: 1]
+Offline since 30 days 13 hours 41 minutes 26 seconds.
+dynmap URL: [3483, -12566](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=3483&z=-12566)
+
+Town: Puerto_Madryn [Nation: Patagonia][Open: False]
+Bank: 0G [Chunks: 169]
+Mayor: gabee0306 [Residents: 1]
+Offline since 30 days 6 hours 4 minutes 49 seconds.
+dynmap URL: [-12360, 8119](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=-12360&z=8119)
+
+Town: Hyrule [Nation: Chad][Open: False]
+Bank: 100G [Chunks: 7]
+Mayor: Pauliepoo008 [Residents: 2]
+Offline since 38 days 20 hours 8 minutes 24 seconds.
+dynmap URL: [3683, 234](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=3683&z=234)
+
+Town: Abidjan [Nation: Guinea][Open: True]
+Bank: 0G [Chunks: 39]
+Mayor: AgentNori [Residents: 1]
+Offline since 32 days 17 hours 54 minutes 40 seconds.
+dynmap URL: [-967, -1125](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=-967&z=-1125)
+
+Town: SantaWorkshop [Nation: Laurentia][Open: False]
+Bank: 0G [Chunks: 3]
+Mayor: makana308 [Residents: 1]
+Offline since 39 days 6 hours 21 minutes 20 seconds.
+dynmap URL: [-15461, -12646](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=-15461&z=-12646)
+
+Town: Porto_Seguro [Nation: Brazil][Open: True]
+Bank: 0G [Chunks: 145]
+Mayor: TomatoesVThe [Residents: 1]
+Offline since 37 days 6 hours 40 minutes 42 seconds.
+dynmap URL: [-7496, 2887](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=-7496&z=2887)
+
+Town: Fork [Nation: Kayes][Open: False]
+Bank: 0G [Chunks: 40]
+Mayor: vanilya [Residents: 1]
+Offline since 32 days 6 hours 39 minutes 45 seconds.
+dynmap URL: [-1768, -2855](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=-1768&z=-2855)
+
+Town: Seychelles [Nation: Lamu][Open: False]
+Bank: 0G [Chunks: 12]
+Mayor: Nagol09 [Residents: 1]
+Offline since 30 days 20 hours 56 minutes 5 seconds.
+dynmap URL: [10058, 743](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=10058&z=743)
+
+Town: Ilfov [Nation: Romania][Open: False]
+Bank: 0G [Chunks: 56]
+Mayor: BigBangCat555 [Residents: 1]
+Offline since 38 days 4 hours 42 minutes 47 seconds.
+dynmap URL: [4677, -8450](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=4677&z=-8450)
+
+Town: North_Maluku [Nation: Philippines][Open: True]
+Bank: 0G [Chunks: 61]
+Mayor: SiegoPie [Residents: 1]
+Offline since 37 days 8 hours 48 minutes 31 seconds.
+dynmap URL: [23443, -403](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=23443&z=-403)
+
+Town: zencitoto [Nation: Prairies][Open: False]
+Bank: 0G [Chunks: 1]
+Mayor: kayrusxbeem [Residents: 1]
+Offline since 38 days 18 hours 7 minutes 34 seconds.
+dynmap URL: [-21144, -10953](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=-21144&z=-10953)
+
+Town: Beelitz [Nation: Germany][Open: False]
+Bank: 256G [Chunks: 57]
+Mayor: ShadyMan313 [Residents: 1]
+Offline since 39 days 22 hours 29 minutes 50 seconds.
+dynmap URL: [2253, -9448](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=2253&z=-9448)
+
+Town: Pulau_Morotai [Nation: Philippines][Open: False]
+Bank: 23G [Chunks: 9]
+Mayor: Don_Willy [Residents: 1]
+Offline since 36 days 23 hours 45 minutes 33 seconds.
+dynmap URL: [23541, -586](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=23541&z=-586)
+
+Town: Piura [Nation: Ecuador][Open: True]
+Bank: 0G [Chunks: 1]
+Mayor: mirkutsk [Residents: 2]
+Offline since 36 days 9 hours 25 minutes 55 seconds.
+dynmap URL: [-15127, 919](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=-15127&z=919)
+
+Town: Griffith [Nation: Australia][Open: True]
+Bank: 0G [Chunks: 11]
+Mayor: Zaktelz [Residents: 1]
+Offline since 32 days 0 hours 46 minutes 29 seconds.
+dynmap URL: [26694, 5765](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=26694&z=5765)
+
+Town: Renessans [Nation: Yamalo][Open: True]
+Bank: 155G [Chunks: 80]
+Mayor: Sleepy8112 [Residents: 2]
+Offline since 38 days 5 hours 4 minutes 48 seconds.
+dynmap URL: [12222, -11913](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=12222&z=-11913)
+
+Town: Daugavpilis [Nation: Livonian_Order][Open: False]
+Bank: 0G [Chunks: 1]
+Mayor: Silvestrss [Residents: 2]
+Offline since 37 days 7 hours 22 minutes 55 seconds.
+dynmap URL: [4465, -10466](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=4465&z=-10466)
+
+Town: west_japan [Nation: Ming][Open: False]
+Bank: 0G [Chunks: 1]
+Mayor: PUNIKUN [Residents: 1]
+Offline since 37 days 16 hours 9 minutes 42 seconds.
+dynmap URL: [23684, -7801](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=23684&z=-7801)
+
+Town: Kirovskov [Nation: Lena][Open: True]
+Bank: 0G [Chunks: 38]
+Mayor: daphydoo [Residents: 2]
+Offline since 40 days 0 hours 51 minutes 10 seconds.
+dynmap URL: [22711, -11308](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=22711&z=-11308)
+
+Town: South_Wolfsburg [Nation: Netherlands][Open: True]
+Bank: 33G [Chunks: 25]
+Mayor: MineCake926 [Residents: 1]
+Offline since 38 days 21 hours 47 minutes 51 seconds.
+dynmap URL: [1617, -9943](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=1617&z=-9943)
+
+Town: Churrasco [Nation: Brazil][Open: False]
+Bank: 4G [Chunks: 13]
+Mayor: Hewhois_Onion [Residents: 1]
+Offline since 41 days 2 hours 51 minutes 16 seconds.
+dynmap URL: [-8968, 1559](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=-8968&z=1559)
+
+Town: Ecuador [Nation: Granadine][Open: True]
+Bank: 15G [Chunks: 46]
+Mayor: xDogMan72 [Residents: 1]
+Offline since 31 days 4 hours 42 minutes 52 seconds.
+dynmap URL: [-14728, -569](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=-14728&z=-569)
+
+Town: Tavadruss [Nation: America][Open: False]
+Bank: 0G [Chunks: 11]
+Mayor: Orunie [Residents: 1]
+Offline since 30 days 15 hours 24 minutes 36 seconds.
+dynmap URL: [-10564, 4893](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=-10564&z=4893)
+
+Town: Rennertshofen [Nation: Lena][Open: False]
+Bank: 12G [Chunks: 9]
+Mayor: Rannshof [Residents: 1]
+Offline since 31 days 6 hours 8 minutes 55 seconds.
+dynmap URL: [21752, -12517](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=21752&z=-12517)
+
+Town: Iquitos [Nation: Loreto][Open: False]
+Bank: 32G [Chunks: 38]
+Mayor: Rafa_1103 [Residents: 1]
+Offline since 38 days 23 hours 3 minutes 0 seconds.
+dynmap URL: [-13746, 537](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=-13746&z=537)
+
+Town: Grodno [Nation: GDL][Open: True]
+Bank: 0G [Chunks: 1]
+Mayor: Beamer4016 [Residents: 2]
+Offline since 40 days 3 hours 37 minutes 50 seconds.
+dynmap URL: [4694, -9973](https://earthmc.net/map/aurora/?worldname=earth&mapname=flat&zoom=5&x=4694&z=-9973)
+

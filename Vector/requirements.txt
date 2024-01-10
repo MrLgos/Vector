@@ -1,0 +1,10 @@
+discord @ https://files.pythonhosted.org/packages/2d/38/d91ac49e8169b6c0f724f7aad26704eec07c4ecf31e067ca3d46a87e33d6/discord-2.3.2-py3-none-any.whl#sha256=d7959418799dd3b1e896685812d880169c193468b061b3431fa2a4664febd3da
+discord.py @ https://files.pythonhosted.org/packages/9c/7e/5f1b24b2ced0c4b3042204f7827b57c7dcb26d368e9b0fde8cec7853cf30/discord.py-2.3.2-py3-none-any.whl#sha256=9da4679fc3cb10c64b388284700dc998663e0e57328283bbfcfc2525ec5960a6
+disnake @ https://files.pythonhosted.org/packages/3e/65/29d144bdddf4e922631df4a5f5a042bea9efe11a168e5d1162e87e2123f8/disnake-2.9.0-py3-none-any.whl#sha256=0dcc1c4e4194e665254ad5533fc78563664ad267261489f6b4fa8e9ea8fcdc79
+EarthMC==3.4.0
+googletrans==4.0.0rc1
+disnake-pagination==1.1
+python-dotenv @ https://files.pythonhosted.org/packages/44/2f/62ea1c8b593f4e093cc1a7768f0d46112107e790c3e478532329e434f00b/python_dotenv-1.0.0-py3-none-any.whl#sha256=f5971a9226b701070a4bf2c38c89e5a3f0d64de8debda981d1db98583009122a
+requests==2.31.0
+urllib3==1.26.15
+

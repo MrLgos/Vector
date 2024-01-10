@@ -100,17 +100,17 @@ class TownCommand(commands.Cog):
       embed.add_field(
           name="Perms",
           value=
-          f"â€¢ `Build` â€” {rnaoPermsList[0]}\nâ€¢ `Destroy` â€” {rnaoPermsList[1]}\nâ€¢ `Switch` â€” {rnaoPermsList[2]}\nâ€¢ `ItemUse` â€” {rnaoPermsList[3]}",
+          f"â€?`Build` â€?{rnaoPermsList[0]}\nâ€?`Destroy` â€?{rnaoPermsList[1]}\nâ€?`Switch` â€?{rnaoPermsList[2]}\nâ€?`ItemUse` â€?{rnaoPermsList[3]}",
           inline=True)
       embed.add_field(
           name="Flags",
           value=
-          f"â€¢ `PvP` â€” {TrueFalse_Flag[townsLookup['perms']['flagPerms']['pvp']]}\nâ€¢ `Explosions` â€” {TrueFalse_Flag[townsLookup['perms']['flagPerms']['explosion']]}\nâ€¢ `Firespread` â€” {TrueFalse_Flag[townsLookup['perms']['flagPerms']['fire']]}\nâ€¢ `Mob Spawns` â€” {TrueFalse_Flag[townsLookup['perms']['flagPerms']['mobs']]}",
+          f"â€?`PvP` â€?{TrueFalse_Flag[townsLookup['perms']['flagPerms']['pvp']]}\nâ€?`Explosions` â€?{TrueFalse_Flag[townsLookup['perms']['flagPerms']['explosion']]}\nâ€?`Firespread` â€?{TrueFalse_Flag[townsLookup['perms']['flagPerms']['fire']]}\nâ€?`Mob Spawns` â€?{TrueFalse_Flag[townsLookup['perms']['flagPerms']['mobs']]}",
           inline=True)
       embed.add_field(
           name="Status",
           value=
-          f"â€¢ `Capital` â€” {TrueFalse_Flag[townsLookup['status']['isCapital']]}\nâ€¢ `Open` â€” {TrueFalse_Flag[townsLookup['status']['isOpen']]}\nâ€¢ `Public` â€” {TrueFalse_Flag[townsLookup['status']['isPublic']]}\nâ€¢ `Neutral` â€” {TrueFalse_Flag[townsLookup['status']['isNeutral']]}\nâ€¢ `Overclaimed` â€” {TrueFalse_Flag[townsLookup['status']['isOverClaimed']]}\nâ€¢ `Ruined` â€” {TrueFalse_Flag[townsLookup['status']['isRuined']]}",
+          f"â€?`Capital` â€?{TrueFalse_Flag[townsLookup['status']['isCapital']]}\nâ€?`Open` â€?{TrueFalse_Flag[townsLookup['status']['isOpen']]}\nâ€?`Public` â€?{TrueFalse_Flag[townsLookup['status']['isPublic']]}\nâ€?`Neutral` â€?{TrueFalse_Flag[townsLookup['status']['isNeutral']]}\nâ€?`Overclaimed` â€?{TrueFalse_Flag[townsLookup['status']['isOverClaimed']]}\nâ€?`Ruined` â€?{TrueFalse_Flag[townsLookup['status']['isRuined']]}",
           inline=True)
 
       await inter.send(embed=embed, ephemeral=False)
@@ -129,12 +129,9 @@ class TownCommand(commands.Cog):
                     filter: str = commands.Param(
                         description="Filter the falling towns",
                         default="None",
-                        choices=["None", "open"]),
-                    server: str = commands.Param(
-                        description="Server name, defaults to Aurora",
-                        default="aurora",
-                        choices=["aurora"])):
-    commandString = f"/town falling filter: {filter} server: {server}"
+                        choices=["None", "open"])
+                   ):
+    commandString = f"/town falling filter: {filter}"
     await inter.response.defer()
     try:
       with open('./logs/towns.txt', 'r', encoding="utf-8") as f:
@@ -267,7 +264,6 @@ class TownCommand(commands.Cog):
           footer=commandString)
 
       await inter.send(embed=embed, ephemeral=True)
-
 
 def setup(bot):
   bot.add_cog(TownCommand(bot))
