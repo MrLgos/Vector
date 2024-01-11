@@ -131,7 +131,7 @@ class TownCommand(commands.Cog):
                         default="None",
                         choices=["None", "open"])
                     ):
-    commandString = f"/town falling filter: {filter} server: {server}"
+    commandString = f"/town falling filter: {filter}"
     await inter.response.defer()
     try:
       with open('./logs/towns.txt', 'r', encoding="utf-8") as f:
